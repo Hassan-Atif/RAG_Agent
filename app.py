@@ -37,7 +37,7 @@ def retrieve_relevant_chunks(query, index, text_chunks, top_k=2):
     return [text_chunks[i] for i in I.tolist()[0]]
 
 # Streamlit UI
-st.title("Policy ChatBot Powered by UDST")
+st.title("Policy ChatBot🤖 Powered by UDST🎓")
 
 # Policy selection
 policy_urls = {
@@ -64,7 +64,7 @@ if st.button("Load"):
     st.success("Policy data loaded successfully!")
 
 # Query input
-query = st.text_input("Ask a Question:")
+query = st.text_input("Ask a Question🙋:")
 if st.button("Get Answer") and "index" in st.session_state:
     retrieved_chunks = retrieve_relevant_chunks(query, st.session_state["index"], st.session_state["chunks"])
     prompt = f"""
